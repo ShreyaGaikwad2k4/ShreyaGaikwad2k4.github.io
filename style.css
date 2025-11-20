@@ -1,0 +1,411 @@
+/* --- Global Styles --- */
+
+/* Reset basic spacing and box model */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f6f8; /* Light gray background */
+    color: #333; /* Dark text for contrast */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+/* --- Header & Navigation --- */
+
+.header {
+    background-color: #ffffff;
+    padding: 1.5rem 3rem; /* 1.5rem top/bottom, 3rem left/right */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between; /* Space logo and nav apart */
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1f2937; /* Dark gray */
+}
+
+.nav a {
+    margin-left: 2rem;
+    font-weight: 600;
+    color: #4b5563; /* Medium gray */
+    padding: 0.5rem 0; /* Padding for better click area */
+    border-radius: 0.5rem;
+}
+
+.nav a:hover {
+    color: #3b82f6; /* Blue hover effect */
+}
+
+.cta-link {
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    margin-left: 2rem;
+}
+
+.cta-link:hover {
+    background-color: #2563eb;
+    color: white; /* Keep text white/* --- Global Styles --- */
+
+/* Reset basic spacing and box model */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f6f8; /* Light gray background */
+    color: #333; /* Dark text for contrast */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+/* --- Header & Navigation --- */
+
+.header {
+    background-color: #ffffff;
+    padding: 1.5rem 3rem; /* 1.5rem top/bottom, 3rem left/right */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between; /* Space logo and nav apart */
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #1f2937; /* Dark gray */
+}
+
+.nav a {
+    margin-left: 2rem;
+    font-weight: 600;
+    color: #4b5563; /* Medium gray */
+    padding: 0.5rem 0; /* Padding for better click area */
+    border-radius: 0.5rem;
+}
+
+.nav a:hover {
+    color: #9dc1fb; /* Blue hover effect */
+}
+
+
+/* --- Hero Section (Main Layout) --- */
+
+.hero-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center; /* Vertically align items */
+    justify-content: space-between; /* Space content and image */
+    gap: 4rem; /* Spacing between the two columns */
+}
+
+.hero-content {
+    flex: 1; /* Allows content to take up space */
+    max-width: 50%;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.15rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #10b981; /* Green CTA */
+    color: white;
+    padding: 0.9rem 2rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    background-color: #059669;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Hero Image/Graphic Placeholder */
+.hero-image-placeholder {
+    flex: 1;
+    max-width: 50%;
+    min-height: 300px; /* Ensure a minimum size */
+    background-color: #e5e7eb; /* Light gray background for placeholder */
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.hero-svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* --- Footer --- */
+
+.footer {
+    background-color: #1f2937; /* Dark background */
+    color: #d1d5db;
+    padding: 2rem 3rem;
+    text-align: center;
+    border-top: 1px solid #374151;
+}
+
+.footer p {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.social-links a {
+    margin: 0 1rem;
+    color: #9ca3af;
+    font-size: 0.9rem;
+}
+
+.social-links a:hover {
+    color: #a4d4f9; /* Blue hover */
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* Targets screens smaller than 768px (e.g., typical mobile phones) */
+@media (max-width: 768px) {
+    
+    /* Header Stacking */
+    .header {
+        flex-direction: column; /* Stack logo and nav vertically */
+        padding: 1.5rem 1rem;
+    }
+
+    .nav {
+        margin-top: 1rem;
+        display: flex; /* Keep nav items in a row, but centered */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav a {
+        margin: 0.5rem 0.5rem; /* Reduce spacing for smaller screens */
+        font-size: 0.9rem;
+    }
+    
+    .cta-link {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    /* Hero Stacking and Full Width */
+    .hero-section {
+        flex-direction: column; /* Stack hero content and image vertically */
+        text-align: center;
+        margin: 3rem 1rem;
+        padding: 0;
+    }
+
+    .hero-content {
+        max-width: 100%; /* Allows content to take full width */
+    }
+
+    .hero-section h1 {
+        font-size: 2rem; /* Smaller font for mobile */
+    }
+
+    .hero-image-placeholder {
+        max-width: 90%;
+        margin-top: 2rem;
+        min-height: 200px;
+    }
+    
+    /* Footer Adjustments */
+    .footer {
+        padding: 2rem 1rem;
+    }
+
+} on hover */
+}
+
+/* --- Hero Section (Main Layout) --- */
+
+.hero-section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center; /* Vertically align items */
+    justify-content: space-between; /* Space content and image */
+    gap: 4rem; /* Spacing between the two columns */
+}
+
+.hero-content {
+    flex: 1; /* Allows content to take up space */
+    max-width: 50%;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.15rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #10b981; /* Green CTA */
+    color: white;
+    padding: 0.9rem 2rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    background-color: #059669;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Hero Image/Graphic Placeholder */
+.hero-image-placeholder {
+    flex: 1;
+    max-width: 50%;
+    min-height: 300px; /* Ensure a minimum size */
+    background-color: #e5e7eb; /* Light gray background for placeholder */
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.hero-svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* --- Footer --- */
+
+.footer {
+    background-color: #1f2937; /* Dark background */
+    color: #d1d5db;
+    padding: 2rem 3rem;
+    text-align: center;
+    border-top: 1px solid #374151;
+}
+
+.footer p {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.social-links a {
+    margin: 0 1rem;
+    color: #9ca3af;
+    font-size: 0.9rem;
+}
+
+.social-links a:hover {
+    color: #3b82f6; /* Blue hover */
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* Targets screens smaller than 768px (e.g., typical mobile phones) */
+@media (max-width: 768px) {
+    
+    /* Header Stacking */
+    .header {
+        flex-direction: column; /* Stack logo and nav vertically */
+        padding: 1.5rem 1rem;
+    }
+
+    .nav {
+        margin-top: 1rem;
+        display: flex; /* Keep nav items in a row, but centered */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav a {
+        margin: 0.5rem 0.5rem; /* Reduce spacing for smaller screens */
+        font-size: 0.9rem;
+    }
+    
+    .cta-link {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    /* Hero Stacking and Full Width */
+    .hero-section {
+        flex-direction: column; /* Stack hero content and image vertically */
+        text-align: center;
+        margin: 3rem 1rem;
+        padding: 0;
+    }
+
+    .hero-content {
+        max-width: 100%; /* Allows content to take full width */
+    }
+
+    .hero-section h1 {
+        font-size: 2rem; /* Smaller font for mobile */
+    }
+
+    .hero-image-placeholder {
+        max-width: 90%;
+        margin-top: 2rem;
+        min-height: 200px;
+    }
+    
+    /* Footer Adjustments */
+    .footer {
+        padding: 2rem 1rem;
+    }
+}
