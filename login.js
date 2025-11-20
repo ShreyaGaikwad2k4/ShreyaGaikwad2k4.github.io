@@ -1,5 +1,5 @@
 // Selecting inputs and buttons
-const emailInput = document.querySelector("input[type='text']");
+const emailInput = document.querySelector("input[type='email']");
 const passwordInput = document.querySelector("input[type='password']");
 const loginBtn = document.querySelector("button");
 const forgotLink = document.querySelector(".login-box a");
