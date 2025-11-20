@@ -1,12 +1,23 @@
-<!-- CSS Mission Demo 1: HTML& CSS Code -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook Login</title>
+    <title>ElevateDev Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <style>
+        html {
+             height: 100%; 
+          }
+
+        :root {
+            --primary-blue: #599df6; 
+            --color-header-light: #f9f9f9; /* Used for Header background */
+            --color-text-dark: #333;
+        }
+        
+        /* GENERAL BODY STYLES */
         body {
             font-family: Arial, sans-serif;
             background-color: #e2ecfa;
@@ -15,17 +26,64 @@
             justify-content: center;
             align-items: center;
             margin: 0;
-            padding: 50px 0;
+            padding: 50px 0 0px 0; 
+            min-height: 100vh;
         }
+        
+        /* --- STICKY HEADER --- */
+        header {
+            background-color: var(--color-header-light); 
+            color: var(--color-text-dark); 
+            padding: 0 25px; 
+            height: 60px; 
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed; 
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+        .header .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+            
+        /* Navigation */
+        .nav {
+            display: flex;
+            align-items: center;
+        }
+            
+        /* Contact Button */
+        .contact-btn {
+            background-color: transparent;
+            color: var(--color-text-dark); 
+            padding: 8px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .contact-btn:hover {
+            color: var(--primary-blue); 
+            background-color: transparent;
+            transform: none;
+        }
+        /* End of Header CSS */
+
+        /* LOGIN BOX STYLES */
         .container {
             text-align: center;
+            margin-top: 20px; /* Adjusted margin since header is fixed */
         }
-        .logo {
-            font-size: 40px;
-            color: #1877f2;
-            font-weight: bold;
-            text-align: center;
-        }
+        
+        
         .login-box {
             background-color: #fff;
             padding: 50px;
@@ -46,7 +104,7 @@
             width: 100%;
             padding: 10px;
             margin-top: 20px;
-            background-color: #1877f2;
+            background-color: #599df6; /* Primary blue button */
             color: white;
             font-size: 16px;
             border: none;
@@ -56,30 +114,118 @@
         .login-box a {
             display: block;
             margin: 10px 0;
-            color: #1877f2;
+            color: #599df6;
             text-decoration: none;
         }
         .create-account {
-            background-color: #1877f2;
+            background-color: #1877f2; /* Secondary blue button */
             margin-top: 20px;
         }
+        /* End of Login Box Styles */
+
+        /* --- FOOTER SECTION --- */
+        .site-footer {
+            width: 100%;
+            background-color: #222; 
+            color: #ccc;
+            padding: 20px 0;
+            margin-top: auto; 
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            /* position: fixed;  */
+            /* bottom: 0; */
+            /* left: 0; */
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .social-links {
+            display: flex;
+            align-items: center;
+            gap: 15px; 
+        }
+
+        .social-links a {
+            color: #ccc;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #7cb3fb;
+        }
+        /* End of Footer CSS */
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column; 
+                height: auto;
+                padding: 10px 20px;
+            }
+            .nav {
+                margin-top: 5px;
+            }
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                padding: 0 20px;
+            }
+            .social-links {
+                margin-top: 10px;
+                gap: 10px;
+            }
+            body {
+                padding-top: 120px; 
+                padding-bottom: 80px;
+            }
+        }
+        
     </style>
 </head>
 <body>
+    <header class="header">
+        <div class="logo">
+            ElevateDev
+        </div>
+        <nav class="nav">
+            <a href="mailto:shreyagaikwad2k4@gmail.com" class="contact-btn">Contact</a>
+        </nav>
+    </header>
+
     <div class="container">
-        <div class="logo">ElevateDev</div>
-        <p>ElevateDev helps you connect and share with the people in your work.</p>
+        <p>ElevateDev helps you build and launch your project efficiently.</p>
         <div class="login-box">
-            <input type="text" placeholder="Email address or phone number">
-            <input type="password" placeholder="Password">
+            <input type="email" placeholder="Email address">
+            <input type="password" placeholder="Enter Password">
             <button>Log in</button>
             <a href="#">Forgotten password?</a>
             <button class="create-account">Create new account</button>
         </div>
-        <p><a href="#">Create a Page</a> for a celebrity, brand or business.</p>
+        <p><a href="#">Create a Page</a> for your brand or business.</p>
     </div>
+    
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 ElevateDev To-Do. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/shreya-gaikwad-2k4" target="_blank" title="My LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/ShreyaGaikwad2k4" target="_blank" title="My GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 
     <script src="login.js"></script>
-
 </body>
 </html>
